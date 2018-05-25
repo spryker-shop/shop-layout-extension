@@ -7,20 +7,19 @@
 
 namespace SprykerShop\Yves\ShopLayoutExtension\Dependency\Plugin\LanguageSwitcherWidget;
 
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * @deprecated
+ */
 interface LanguageSwitcherWidgetPluginInterface
 {
     const NAME = 'LanguageSwitcherWidgetPlugin';
 
     /**
-     * @param string $pathInfo
-     * @param string $queryString
-     * @param string $requestUri
+     * @param \Symfony\Component\HttpFoundation\Request $request
      *
      * @return void
      */
-    public function initialize(
-        string $pathInfo,
-        $queryString,
-        string $requestUri
-    ): void;
+    public function initialize(Request $request): void;
 }
